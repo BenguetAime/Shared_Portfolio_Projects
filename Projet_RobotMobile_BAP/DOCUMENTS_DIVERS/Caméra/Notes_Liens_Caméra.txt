@@ -1,0 +1,155 @@
+######
+Tutorial:
+-https://freenove.com/tutorial
+-https://freenove.com/fnk0056
+
+###### Activé la caméra
+##SOUS RASPBIAN:
+-Faire ce qui est demandé sur le tuto au début(ajouter >>dtoverlay=imx219 à la fin
+du fichier ouvert par:>> sudo nano /boot/config.txt);
+
+-faire:>>sudo raspi-config ET "interfaces..." ET Cocher où il faut pour activer la caméra.
+
+
+##SOUS UBUNTU:
+-Ouvrir le fichier de config avec un éditeur graphique:
+>>sudo xdg-open /boot/firmware/config.txt
+Faire comme avec Raspbian ...ajouter à la fin >>dtoverlay=imx219
+
+
+
+#################### FAIT "   CLONAGE D'UN REPOSITORY pour installer "libcamera" ####################
+https://github.com/raspberrypi/libcamera
+##
+D'accord, voici les étapes complètes à suivre après avoir cloné le dépôt libcamera :
+
+
+############## FAIT
+bash
+Copy code
+# Cloner le dépôt libcamera depuis GitHub
+git clone https://github.com/raspberrypi/libcamera.git
+
+# Accéder au répertoire libcamera
+cd libcamera
+
+# Installer les dépendances de compilation
+sudo apt-get update
+sudo apt-get install build-essential cmake git libboost-filesystem-dev libboost-regex-dev libboost-system-dev libdrm-dev libjpeg-dev libudev-dev
+
+# Créer un répertoire build et accéder à ce répertoire
+mkdir build
+cd build
+
+# Configurer libcamera avec CMake
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+
+
+
+########## FAIT
+Vérifiez la présence du périphérique /dev/video0 :
+Exécutez la commande suivante pour vérifier si le périphérique de capture vidéo est correctement détecté :
+
+bash
+Copy code
+ls /dev/video*
+Si vous ne voyez pas /dev/video0, cela peut indiquer un problème de détection de la caméra. Assurez-vous que la caméra est correctement connectée.
+
+Vérifiez les autorisations d'accès :
+Assurez-vous que l'utilisateur exécutant la commande a les autorisations appropriées pour accéder au périphérique vidéo. Vous pouvez ajouter l'utilisateur au groupe video avec la commande suivante (remplacez "utilisateur" par votre nom d'utilisateur) :
+
+bash
+Copy code
+sudo adduser utilisateur video
+Redémarrez le système :
+Après avoir apporté des modifications aux autorisations ou après avoir connecté la caméra, il peut être utile de redémarrer le système pour que les modifications prennent effet.
+
+Vérifiez que v4l2 est correctement installé :
+Assurez-vous que le module v4l2 (Video for Linux 2) est correctement installé sur votre système :
+
+bash
+Copy code
+sudo modprobe v4l2loopback
+Si le module n'est pas installé, vous pouvez l'installer avec la commande :
+
+bash
+Copy code
+sudo apt-get install v4l2loopback-utils
+Assurez-vous que la caméra est activée :
+Si vous utilisez une caméra Raspberry Pi, assurez-vous que la caméra est activée via raspi-config.
+
+Vérifiez la configuration vidéo :
+Vous pouvez utiliser la commande v4l2-ctl pour afficher des informations sur les périphériques vidéo :
+
+bash
+Copy code
+v4l2-ctl --list-devices
+Assurez-vous que la caméra est répertoriée et qu'elle a le bon chemin (généralement /dev/video0).
+
+Essayez ces étapes et voyez si elles résolv
+
+
+# Compiler libcamera
+make
+
+# Installer libcamera
+sudo make install
+Ces étapes couvrent le processus complet de clonage du dépôt libcamera depuis GitHub, l'installation des dépendances de compilation, la configuration avec CMake, la compilation et l'installation de libcamera sur votre système. Assurez-vous de suivre ces étapes dans l'ordre indiqué. Après cela, libcamera devrait être installé sur votre Raspberry Pi.
+
+
+
+###########
+###########
+
+CMake :
+
+CMake est un système de génération de fichiers de configuration utilisé dans le processus de construction de logiciels. Son objectif principal est de simplifier le processus de configuration et de compilation des projets logiciels en fournissant une syntaxe de script simple et indépendante de la plate-forme.
+
+Lorsque vous avez un projet logiciel, il peut dépendre de différentes bibliothèques, avoir des configurations spécifiques pour différents systèmes d'exploitation, et nécessiter divers ajustements. CMake permet de décrire ces dépendances et configurations de manière structurée dans un fichier appelé CMakeLists.txt. Ce fichier contient des instructions pour CMake sur la manière de générer les fichiers de construction adaptés à la plate-forme cible (par exemple, Makefile sur les systèmes Unix, projets Visual Studio sur Windows).
+
+En résumé, CMake génère des fichiers de configuration adaptés à la plate-forme, qui peuvent ensuite être utilisés pour construire le logiciel.
+
+Build :
+
+Le terme "build" fait référence au processus de compilation, d'édition des liens et de création d'une version exécutable d'un programme à partir de son code source. Le processus de construction peut varier en fonction du langage de programmation utilisé, des dépendances du projet et du système d'exploitation.
+
+Lorsque vous exécutez une commande comme make (dans le cas de projets basés sur C/C++), cela déclenche le processus de construction. Les outils de construction (Make, Ninja, etc.) utilisent les fichiers de configuration générés par CMake pour orchestrer le processus de compilation. Cela implique généralement la compilation de chaque fichier source en un fichier objet, suivi de l'édition des liens pour créer l'exécutable final.
+
+En résumé, le processus de build est l'étape où le code source est transformé en une application ou une bibliothèque exécutable. Cela peut inclure la compilation de fichiers source, la gestion des dépendances, l'édition des liens et d'autres étapes nécessaires pour produire un exécutable fonctionnel.
+
+
+
+########### FAIT
+###########
+Pour installer raspi-config sur Raspberry Pi et configurer le support de la caméra legacy, ainsi que pour installer ffmpeg pour utiliser ffplay pour le streaming vidéo, vous pouvez suivre ces étapes :
+
+Installer raspi-config :
+
+bash
+Copy code
+sudo apt-get update
+sudo apt-get install raspi-config
+Ensuite, exécutez raspi-config :
+
+bash
+Copy code
+sudo raspi-config
+À l'intérieur de raspi-config, recherchez l'option permettant de configurer le support de la caméra. Activez-le si ce n'est pas déjà fait.
+
+Installer ffmpeg :
+
+bash
+Copy code
+sudo apt-get install ffmpeg
+Vérifier l'installation :
+Après l'installation, vous pouvez vérifier que ffmpeg est bien installé en exécutant :
+
+bash
+Copy code
+ffmpeg -version
+Assurez-vous également que ffplay est installé :
+
+bash
+Copy code
+ffplay -version
+Ces commandes devraient afficher les informations de version si l'installation s'est déroulée correctement.
