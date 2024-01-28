@@ -1,9 +1,22 @@
-######
+################################
 Tutorial:
 -https://freenove.com/tutorial
 -https://freenove.com/fnk0056
 
-###### Activé la caméra
+
+___ LIENS INTERESSANTS
+https://sharad-rawat.medium.com/raspberry-pi-camera-module-calibration-using-opencv-f75ff9fc1441
+
+___ OPEN CV
+https://how2electronics.com/how-to-install-setup-opencv-on-raspberry-pi-4/
+################################
+
+
+
+
+
+
+###### Activer la caméra
 ##SOUS RASPBIAN:
 -Faire ce qui est demandé sur le tuto au début(ajouter >>dtoverlay=imx219 à la fin
 du fichier ouvert par:>> sudo nano /boot/config.txt);
@@ -18,10 +31,41 @@ Faire comme avec Raspbian ...ajouter à la fin >>dtoverlay=imx219
 
 
 
+
+
+########### CAMERA "on/off" ???
+Pour désactiver et réactiver la caméra Raspberry Pi sous Raspbian, vous pouvez utiliser les modules bcm2835-v4l2 pour désactiver la caméra et bcm2835-v4l2 pour la réactiver.
+
+Voici comment faire :
+
+Désactiver la caméra :
+bash
+Copy code
+sudo modprobe -r bcm2835-v4l2
+Cette commande déchargera le module kernel responsable de la prise en charge de la caméra.
+
+Réactiver la caméra :
+bash
+Copy code
+sudo modprobe bcm2835-v4l2
+Cette commande chargera à nouveau le module kernel pour activer la caméra.
+
+Assurez-vous de désactiver la caméra lorsque vous n'en avez pas besoin pour économiser de l'énergie et prolonger la durée de vie de la caméra. Et n'oubliez pas que certaines applications pourraient ne pas fonctionner correctement si la caméra est désactivée.
+###########
+
+
+
+
+
+
 #################### FAIT "   CLONAGE D'UN REPOSITORY pour installer "libcamera" ####################
 https://github.com/raspberrypi/libcamera
 ##
 D'accord, voici les étapes complètes à suivre après avoir cloné le dépôt libcamera :
+
+
+
+
 
 
 ############## FAIT
@@ -43,6 +87,9 @@ cd build
 
 # Configurer libcamera avec CMake
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+
+
+
 
 
 
@@ -153,3 +200,31 @@ bash
 Copy code
 ffplay -version
 Ces commandes devraient afficher les informations de version si l'installation s'est déroulée correctement.
+
+
+
+
+
+###########
+########### FAIT
+Si rien ne s'affiche lorsque vous exécutez la commande dpkg -l | grep libcamera, cela signifie que le paquet libcamera n'est pas installé sur votre système. Dans ce cas, vous devriez l'installer à partir des sources ou en utilisant un autre moyen disponible.
+
+Si libcamera est nécessaire pour utiliser picamera2, vous pouvez envisager d'installer libcamera à partir de ses sources. Voici comment vous pouvez le faire :
+
+Téléchargement des sources de libcamera :
+Vous pouvez télécharger les sources de libcamera depuis son dépôt GitHub officiel :
+
+bash
+Copy code
+git clone https://git.linuxtv.org/libcamera.git
+Construction et installation de libcamera :
+Accédez au répertoire libcamera et suivez les instructions de compilation et d'installation fournies dans le fichier README.md ou dans la documentation disponible sur le dépôt GitHub.
+
+Généralement, vous devrez exécuter les commandes suivantes :
+
+bash
+Copy code
+cd libcamera
+meson build
+ninja -C build
+sudo ninja -C build install
