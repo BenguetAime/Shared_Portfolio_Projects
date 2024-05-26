@@ -1,0 +1,51 @@
+##### COURS DE CONSTRUCTION MECANIQUE!!! ####
+https://www.cours-et-exercices.com/2016/03/cours-des-engrenages.html
+
+
+##### SOLIDWORKS
+__ Créer des variables globales (voir 3min25s)
+https://www.youtube.com/watch?v=6Bz-0aLc2eg
+-
+
+
+
+
+##### VIS - Écrous #####
+
+---- TAP & DIE : 
+lors du filetage SolidWorks (<=> Taraud(outil pour taraudage) et Filère(outil pour filetage))
+
+** Pour taraudage : sous solidworks, il faut faire le trou (perçage) avec le diamètre de pré-perçage: donné par des tables...
+-
+Après une vis fileté: faire éventuellement un enlèvement de matière sur la partie non parfaite(sélection de la face pbmatique + "convertir les entités" +
+ enlevement de matière extrudé)
+
+
+** Pour le filetage : partir du diamètre nominal; puis creuser de la matière avec l'outil filetage.
+DANS LES 2 CAS - 
+Si on construit une vis ou un écrou: choisir "couper le filetage" et non "extruder le filetage"
+-
+Prendre un pas à droite par défaut!
+-
+Après un taraudage - Faire déborder le filetage (Boîte de dialogue lié à la fonction "filetage" + "décaler")
+
+** CONTRAINTE HELICOIDALE:
+-
+Contrainte + Contrainte mécanique (boîte de dialogue) + "Contrainte hélicoÏdale" + {Sélectionner une zone filetée de la vis + Sélectionner "loeil au niveau du ruban en bas (Cacher toutes les vues) + Axes temporaires et Sélectionner celui lié à l'écrou" - ces 2 sélections créent la contrainte hélicoÏdale}+ cocher "Distance/révolution" et entrer le pas
+
+-
+Fixer les limites du mouvement rectiligne: contrainte + "avancé" +Distance mini/max
+
+
+** ANIMATION :
+en bas à gauche de l'écran : "étude de mouvement"
+
+
+
+----
+Vis CHC: 1/forme de la tête :tête *C*ylindrique, marque sur la tête: *HC* (6 pans creux)
+C : Cylindrique
+H : Hexagonale (forme hexagonale, ou six pans)
+C : Creux (indiquant que la tête est creuse et peut être entraînée à l'aide d'une clé hexagonale ou d'une clé Allen)
+
+Vis FHC: 1/forme de la tête :tête *F*raisée, marque sur la tête: *HC* (6 pans creux)
