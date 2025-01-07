@@ -1,5 +1,32 @@
 #######################################################  SOURCES  ##################################################
 
+____________________
+>> Bonne pratique - Conception du robot - faire:
+- Spécifications
+- Spécifications
+- Schéma - Matériel : Sysml, Fast…
+- Schéma - logiciel : UML, etc.
+
+- Conception, idées préliminaires;
+- Premières conceptions/dessins/schémas
+- Choix et achat des composants : mécanique, électrique, etc.
+- Schéma de câblage
+- Intégration mécanique des composants dans la CAO (brouillon)
+
+- CAO
+- Simulations/Vérifications
+- Choix et achats des pièces de fixations
+- Impression 3D; Assemblage.
+- Monter le robot
+
+-- Code informatique pour mise en oeuvre respectant la Spec. logiciel
+- Versioning : Github.
+_____________________
+
+
+
+
+
 -- IMPRESSION 3D :
 https://www.hubs.com/fr/impression-3d/france/toulon/?device=c&position=&utm_source=adwords_g&utm_medium=cpc&utm_campaign=10035253659&utm_content=119381909725&utm_term=impression%203d%20toulon&hsa_grp=119381909725&hsa_ver=3&hsa_src=g&hsa_kw=impression%203d%20toulon&hsa_ad=599244492435&hsa_cam=10035253659&hsa_net=adwords&hsa_mt=p&hsa_acc=4596651596&hsa_tgt=kwd-352534177666&gad_source=1&gclid=Cj0KCQiAkKqsBhC3ARIsAEEjuJjNGS5goFgzcEBfS_pBPo0jBM0cvAJhyV0oil0U56oGSBc3pIhK6CcaAgPFEALw_wcB
 
@@ -8,16 +35,12 @@ https://www.hubs.com/fr/impression-3d/france/toulon/?device=c&position=&utm_sour
 https://www.weerg.com/fr
 
 
---** ACHAT VIS : 
-https://www.bricovis.fr/cart/
+
+
 
 
 -- CAO DE PIÈCES :
 https://grabcad.com/library/gm25-370-gearbox-motor-1
-
-
-
-
 
 
 --
@@ -44,22 +67,42 @@ https://eduscol.education.fr/sti/ressources_techniques/robot-industriel-fanuc-m2
 
 *1/https://www.youtube.com/watch?v=bl2k6eXDAGM
 2/https://www.youtube.com/watch?v=bsB5shP3vls
+*3/https://www.youtube.com/watch?v=-PCuDnpgiew&list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT&index=7
+*4/ https://www.youtube.com/watch?v=D5r3qVpn-OA
+- Le codeur : technologie magnétique :
+https://www.youtube.com/watch?v=SCR5YJZVyKg&t=24s
+
+
+-- les interruptions matérielles / Arduino méga :
+INT0 - Pin numérique 2
+INT1 - Pin numérique 3
+INT2 - Pin numérique 21
+INT3 - Pin numérique 20
+INT4 - Pin numérique 19
+INT5 - Pin numérique 18
+- EX: attachInterrupt(digitalPinToInterrupt(pin), fonction, mode);
+pin : le numéro de la pin (2, 3, 18, 19, 20, 21 pour l’Arduino Mega).
+fonction : la fonction à appeler lors de l'interruption.
+mode : le mode de déclenchement, qui peut être LOW, CHANGE, RISING, ou FALLING.
+
 
 
 -- Source "câblage moteurs": 
 https://stackoverflow.com/questions/74481393/arduino-mega-with-l298n-and-motors-with-encoders-not-registering-encoders
+-
+Le L298 comporte deux canaux (A et B), chacun constitué d'un pont en H qui contrôle un moteur. Pour chaque canal, on utilise les broches suivantes pour contrôler le moteur :
+
+Broches IN1, IN2 (pour le moteur A: pour mon robot: moteur à droite du chassis) et IN3, IN4 (pour le moteur B) :
+Ces broches contrôlent le sens de rotation. En ajustant l'état de ces broches (HIGH ou LOW), on peut faire tourner le moteur dans un sens ou dans l'autre.
+Broches ENA (Enable A) et ENB (Enable B) :
+Ces broches contrôlent la vitesse du moteur via une modulation de largeur d'impulsion (PWM).
+En appliquant un signal PWM à ENA ou ENB, on peut ajuster la vitesse de rotation.
 
 
 -- Exemple de BRAS ROBOTIQUE avec dimension et servo MG996: 
 1/https://french.alibaba.com/p-detail/Education-60775078364.html?spm=a2700.details.0.0.ef214000v6yQoa
 
 2/https://french.alibaba.com/p-detail/kuka-60801707508.html?spm=a2700.details.0.0.ef214000v6yQoa
-
-
-
--------- Exemple de robot en vente (voir data sheet):
-
-
 
 
 
@@ -120,9 +163,6 @@ Commande passée - Arrivée prévue: 08/01/2024 :
 
 
 
-
-
-
 ############################################# DATA SHEET ##############################################
 
 --- Battérie RPI:
@@ -130,21 +170,12 @@ https://www.kubii.com/fr/batteries-piles/3298-batterie-externe-20000mah-pd-30-qc
 
 ---Moteurs + Roues:
 https://www.robot-maker.com/shop/kits-robots/51-kit-moteur-gm25-370ca-encodeur-roue-chromee-51.html
-
---- Roues: précisions
+- Roues: précisions
 https://eu.robotshop.com/fr/products/dfrobot-rubber-wheel-pair-blue
 
 --- Servo moteur SG90: Réglage de la bande morte ??????
 https://www.az-delivery.de/fr/products/az-delivery-micro-servo-sg90
-
---- https://docs.google.com/document/d/1fB1Mz_2yF2A_2FW7ove8CVlg0SEZiuJjskb0R13kwt8/pub
-
---- Servo moteur MG966R : 
-https://askelectronics.co.ke/product/servo-motor-mg996r-high-torque-metal-gear/
-
-
-
-
+- https://docs.google.com/document/d/1fB1Mz_2yF2A_2FW7ove8CVlg0SEZiuJjskb0R13kwt8/pub
 
 
 
@@ -191,23 +222,13 @@ ________________27/04/2024
 
 
 
-
-
-
-
-
-
-______________ RAPPEL VIS :
+______________ RAPPEL :
 ########## BASE NON HOLONOME
-
-
-****** IMPRESSION 3D : FDM
-
 __Niveau 1:
 
 
 - Fixation Moteur: 
-Réalisation d'un support sur la base, à savoir des trous (avant perçage - taraudés ensuite) de D=2.5mm (pour vis M3x0.5- tête Philips ou Posidriv?); Diamètre Tête >=5mm; L=8mm min.
+Réalisation d'un support sur la base, à savoir des trous (avant perçage - taraudés ensuite) de D=2.5mm (pour vis M3- tête Philips ou Posidriv?); Diamètre Tête >=5mm; L=8mm min.
 
 Dessin d'un modèle de vis correspondant : M3 -Tête Cylindrique - empreinte cruciforme Phillips (PH; Longueur=5mm ?- vue en ligne): 
 
@@ -220,7 +241,7 @@ Dessin d'un modèle de vis correspondant : M3 -Tête Cylindrique - empreinte cru
 - 1 vis pour palonnier sur moteur: 	 M2x5-L?comme les vis fournis dans le kit Arduino: ok qd même 
 (pas besoin d'en prendre pour SG90 car Diam. trou taraudé pour vis M5 dessiné; seul utile)
 
-- 4 vis fixation roues arrièrers :	M5x0.8 
+
 
 
 __Niveau 2 :
@@ -234,10 +255,9 @@ __Niveau 3:
 
 - 4 fixation niv2 et niv3:	 M5x0.8 L=30mm au max; 
 - 3 Vis LIDAR FIXATION :	 	 M2.2X0.451  L=1cm max et 8mm min, ok dessiné
-
-
-
-
+- 4 Vis bras sur niveau 3  :		M5x0.8 L=30mm max.
+*
+- 2 Vis Fixation servomoteur mg996R sur base-bras: 	M2x0.4, dessiné sur SW.
 
 
 
@@ -245,28 +265,8 @@ __Niveau 3:
 
 
 ############################################################################
-___________ BRAS ROBOTIQUE 
+_______ BRAS ROBOTIQUE
 
-****** IMPRESSION 3D : MJF
-https://polyd.com/fr/blog/nylon_pa12
-*******
-Total produits148,52€
-
-Total expédition14,74€
- 
-Total TVA32,66€
-
- 
-
-
-____________
-- https://www.youtube.com/watch?v=aFlnFysM9E0 : composants d'un bras robotique
-- https://www.youtube.com/watch?v=F29vrvUwqS4&t=221s : Un exmple - petit bras
-
-
-
-
-____________
 
 - https://www.youtube.com/watch?v=aFlnFysM9E0 : composants d'un bras robotique
 
@@ -288,93 +288,6 @@ https://www.ebay.fr/itm/382515795058?_trkparms=amclksrc%3DITM%26aid%3D1110006%26
 
 
 
-
-
-
-
-
 ______ BRAS ROBOTIQUE, Fixation :
 
-
-** BASE :
-- !!!!! 2 Vis Fixation servomoteur mg996R sur base-bras: 	M2x0.4 L=12 min et 15max?, dessiné sur SW.
-- 4 vis fixation "Base=Epaule" sur Niv3 base non holonome : 	M5x0.8 L=30mm max.
-
-
-
-
-
-** EPAULE :
-MOYEN DE FIXATION : Fixer "épaule" + servo Joint2 puis poser sur la base; Puis Rajouter le cylindre de guidage en rotation.
-
-- Fixation Cylindrique, guidage en rotation : 1 vis M3x0.5 Long=1cm min et 1.5cm max (1cm OK; idem pour fixation moteur)
-
-- !!!! 4 Vis Fixation servomoteur mg996R sur "Épaule" : 	M2x0.4
-
-
-
-
-** BRAS :
-- Fixation Cylindrique, guidage en rotation : 1 vis M3x0.5 Long=1cm min et 1.5cm max (1cm OK; idem pour fixation moteur)
-- !!!! 4 Vis Fixation servomoteur mg996R sur "Épaule" : 	M2x0.4
-
-
-
-** COUDE - TANGAGE:
-- Fixation Cylindrique, guidage en rotation : 1 vis M3x0.5 Long=1cm min et 1.5cm max (1cm OK; idem pour fixation moteur)
-- !!!! 4 Vis Fixation servomoteur mg996R sur "Épaule" : 	M2x0.4
-
-
-** COUDE - ROULIS: - Fixation Cylindrique, guidage en rotation : 1 vis M3x0.5 Long=1cm min et 1.5cm max (1cm OK; idem pour fixation moteur)
-- !!!! 4 Vis Fixation servomoteur mg996R sur "Épaule" : 	M2x0.4
-
-
-
-** Poignet Tangage: 
-- Fixation Cylindrique, guidage en rotation : 1 vis M3x0.5 Long=1cm min et 1.5cm max (1cm OK; idem pour fixation moteur)
-- !!!! 4 Vis Fixation servomoteur mg996R sur "Épaule" : 
-
-- Trouve taraudé - fixation Pince : M1.4x0.3
-
-- 4 vis M2x0.5 pour RpiCamera
-
-
-__________
-***************** Pince : Pince+ServoMG995 = 28.45 EUROS
-
-- Fixation Pince-Bras : Diamètre Trou de fixation = 1 de 1.5mm (centre) et 2 de 3mm : => Prendre 2 vis M2.5 L=1cm;  et 1 M1.4x0.3 L=1cm
-
-- Fixation Servo-Pince :	M5x0.8 : NE PAS OUBLIER D'IMPRIMER CETTE PIECE DE FIXATION ET LA COLLER PLUS TARD
-A LA FIXATION CYLINDRIQUE DU SERVOM.
-
-
-
-
-
-
-
-
-####################################################"" VISSERIE
-____
-TOTAL HT 10,98 €
-Dont livraison Colissimo 2,20 €
-_
-TVA 2,20 €
-TOTAL TTC 13,18 €
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*** PINCE : 5 fixations entre poignet et pince (pince simplest & cheaper)
