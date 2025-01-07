@@ -1,0 +1,7 @@
+"Id";"Référence";"Empreinte";"Quantité";"Désignation";"Fournisseur et réf";
+1;"J3,J2";"PinHeader_1x02_P2.54mm_Vertical";2;"Conn_01x02";;;
+2;"C2";"C_0805_2012Metric_Pad1.18x1.45mm_HandSolder";1;"10u";;;
+3;"C1";"CP_Elec_5x5.4";1;"47u";;;
+4;"C3,C4";"C_0805_2012Metric_Pad1.18x1.45mm_HandSolder";2;"100n";;;
+5;"U1";"TSSOP-8_3x3mm_P0.65mm";1;"LMV358";;;
+6;"J1";"PinHeader_1x03_P2.54mm_Vertical";1;"Alimentation";;;

@@ -1,0 +1,14 @@
+"Id";"Référence";"Empreinte";"Quantité";"Désignation";"Fournisseur et réf";
+1;"J2";"USB_Micro-B_Molex_47346-0001";1;"USB_B_Micro";;;
+2;"C4";"C_0603_1608Metric";1;"10u";;;
+3;"R3";"R_1206_3216Metric";1;"22";;;
+4;"Q1";"SOT-23";1;"SI2302";;;
+5;"C5";"C_0603_1608Metric";1;"22u";;;
+6;"R2";"R_0805_2012Metric";1;"LED2";;;
+7;"C2,C1";"C_0402_1005Metric";2;"100n";;;
+8;"J1";"PinHeader_1x04_P1.27mm_Vertical";1;"Conn_01x04_Pin";;;
+9;"C3";"C_0402_1005Metric";1;"10n";;;
+10;"U1";"TSSOP-14_4.4x5mm_P0.65mm";1;"STM32L011D4Px";;;
+11;"R1";"R_0805_2012Metric";1;"LED1";;;
+12;"FB1";"L_0805_2012Metric";1;"100ohm @ 100m";;;
+13;"U2";"SOT-223-3_TabPin2";1;"AMS1117-3.3";;;

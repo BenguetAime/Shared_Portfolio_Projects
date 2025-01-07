@@ -1,0 +1,3 @@
+Info: Fichier placement: 'D:\3A_Seatech\3A_DOC_SYSMER\3A_DOC_PERSO\Certif_KICAD_Udemy\Prog_kicad\Projet2\CPL_\Projet2-all-pos.csv'.
+Info: Nombre de composants: 8.
+Info: Le fichier a été créé correctement.

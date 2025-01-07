@@ -1,0 +1,9 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"J2","Conn_01x02","PinHeader_1x02_P2.54mm_Vertical",64.935000,-49.750000,-90.000000,bottom
+"C1","47u","CP_Elec_5x5.4",42.100000,-30.700000,0.000000,top
+"C2","10u","C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",39.787500,-36.350000,0.000000,top
+"C3","100n","C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",39.712500,-40.850000,180.000000,top
+"C4","100n","C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",39.762500,-38.600000,0.000000,top
+"J1","Alimentation","PinHeader_1x03_P2.54mm_Vertical",35.100000,-35.275000,0.000000,top
+"J3","Conn_01x02","PinHeader_1x02_P2.54mm_Vertical",51.960000,-49.750000,90.000000,top
+"U1","LMV358","TSSOP-8_3x3mm_P0.65mm",44.300000,-38.700000,-90.000000,top

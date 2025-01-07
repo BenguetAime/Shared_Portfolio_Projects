@@ -1,0 +1,18 @@
+"Id";"Référence";"Empreinte";"Quantité";"Désignation";"Fournisseur et réf";
+1;"R2,R1";"R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal";2;"10k";;;
+2;"C2";"C_Radial_D5.0mm_H5.0mm_P2.00mm";1;"1u";;;
+3;"C1";"C_Radial_D5.0mm_H5.0mm_P2.00mm";1;"100u";;;
+4;"C5,C6";"C_Disc_D3.0mm_W1.6mm_P2.50mm";2;"22p";;;
+5;"SW1";"SW_PUSH_6mm";1;"SW_Push";;;
+6;"J6";"PinSocket_1x03_P2.54mm_Vertical";1;"OSC Port";;;
+7;"J1";"BarrelJack_Horizontal";1;"Barrel_Jack";;;
+8;"J3";"PinHeader_1x02_P2.54mm_Vertical";1;"GND Hook";;;
+9;"U2";"TO-220-3_Horizontal_TabDown";1;"L7805";;;
+10;"J2";"PinSocket_1x09_P2.54mm_Vertical";1;"Power Port";;;
+11;"C4,C3";"C_Disc_D3.0mm_W1.6mm_P2.50mm";2;"100n";;;
+12;"D1";"LED_D3.0mm";1;"LED";;;
+13;"J7";"PinSocket_1x06_P2.54mm_Vertical";1;"PORTA";;;
+14;"J4";"PinSocket_1x08_P2.54mm_Vertical";1;"PORTB";;;
+15;"J8";"PinSocket_1x05_P2.54mm_Vertical";1;"ICSP Port";;;
+16;"U1";"DIP-28_W7.62mm";1;"PIC18F2550-ISP";;;
+17;"J5";"PinSocket_1x08_P2.54mm_Vertical";1;"PORTC";;;

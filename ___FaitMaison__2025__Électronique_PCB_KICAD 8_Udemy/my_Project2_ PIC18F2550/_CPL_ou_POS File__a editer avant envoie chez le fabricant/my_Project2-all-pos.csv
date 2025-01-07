@@ -1,0 +1,21 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","100u","C_Radial_D5.0mm_H5.0mm_P2.00mm",93.218000,-76.300500,-90.000000,top
+"C2","1u","C_Radial_D5.0mm_H5.0mm_P2.00mm",97.900000,-60.400000,-90.000000,top
+"C3","100n","C_Disc_D3.0mm_W1.6mm_P2.50mm",127.635000,-55.753000,180.000000,top
+"C4","100n","C_Disc_D3.0mm_W1.6mm_P2.50mm",138.978000,-75.819000,0.000000,top
+"C5","22p","C_Disc_D3.0mm_W1.6mm_P2.50mm",127.000000,-70.398000,-90.000000,top
+"C6","22p","C_Disc_D3.0mm_W1.6mm_P2.50mm",132.588000,-72.898000,90.000000,top
+"D1","LED","LED_D3.0mm",87.884000,-53.721000,0.000000,top
+"J1","Barrel_Jack","BarrelJack_Horizontal",86.645000,-77.216000,0.000000,top
+"J2","Power Port","PinSocket_1x09_P2.54mm_Vertical",126.517000,-82.169000,90.000000,top
+"J3","GND Hook","PinHeader_1x02_P2.54mm_Vertical",145.923000,-68.580000,0.000000,top
+"J4","PORTB","PinSocket_1x08_P2.54mm_Vertical",122.428000,-43.180000,-90.000000,top
+"J5","PORTC","PinSocket_1x08_P2.54mm_Vertical",146.827000,-43.155000,-90.000000,top
+"J6","OSC Port","PinSocket_1x03_P2.54mm_Vertical",132.334000,-76.327000,-90.000000,top
+"J7","PORTA","PinSocket_1x06_P2.54mm_Vertical",106.807000,-82.296000,90.000000,top
+"J8","ICSP Port","PinSocket_1x05_P2.54mm_Vertical",82.550000,-43.180000,90.000000,top
+"R1","10k","R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal",98.600000,-56.700000,180.000000,top
+"R2","10k","R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal",86.741000,-48.514000,0.000000,top
+"SW1","SW_Push","SW_PUSH_6mm",75.998000,-50.201000,0.000000,top
+"U1","PIC18F2550-ISP","DIP-28_W7.62mm",104.902000,-66.802000,90.000000,top
+"U2","L7805","TO-220-3_Horizontal_TabDown",91.526000,-65.786000,90.000000,top
